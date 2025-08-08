@@ -1,0 +1,7 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#F5DEB3"/>
+  <ellipse cx="150" cy="80" rx="60" ry="20" fill="#DEB887"/>
+  <ellipse cx="150" cy="100" rx="60" ry="20" fill="#DEB887"/>
+  <ellipse cx="150" cy="120" rx="60" ry="20" fill="#DEB887"/>
+  <text x="150" y="160" text-anchor="middle" fill="#8B4513" font-size="14" font-family="Arial">Panquecas de Aveia</text>
+</svg>

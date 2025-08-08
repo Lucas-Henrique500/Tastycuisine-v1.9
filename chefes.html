@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chefes - Tasty Cuisine</title>
+  <link rel="stylesheet" href="chefes.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Tasty Cuisine</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="por_ingredientes.html">Por Ingredientes</a></li>
+        <li><a href="dicas_saudaveis.html">Dicas Saudáveis</a></li>
+        <li><a href="chefes.html">Chefes</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="chefes-intro">
+      <h2>Conheça nossos Chefes</h2>
+      <p>Profissionais apaixonados por gastronomia e saúde. Inspire-se com suas criações e conheça seus restaurantes!</p>
+    </section>
+
+    <section class="chefes-lista">
+      <div class="chefe-card">
+        <img src="img/chefe1.jpg" alt="Chefe Maria Lima" />
+        <h3>Maria Lima</h3>
+        <p>Especialista em culinária vegetariana e saudável. Criadora do restaurante "Sabor da Terra".</p>
+        <button onclick="verPerfil('maria-lima')">Ver Perfil</button>
+      </div>
+
+      <div class="chefe-card">
+        <img src="img/chefe2.jpg" alt="Chefe João Prado" />
+        <h3>João Prado</h3>
+        <p>Chefe contemporâneo, une sabores tradicionais com técnicas modernas. Atende no "Gourmet Vital".</p>
+        <button onclick="verPerfil('joao-prado')">Ver Perfil</button>
+      </div>
+
+      <div class="chefe-card">
+        <img src="img/chefe3.jpg" alt="Chefe Carla Mendes" />
+        <h3>Carla Mendes</h3>
+        <p>Formada na França, traz inovação à culinária funcional e saudável.</p>
+        <button onclick="verPerfil('carla-mendes')">Ver Perfil</button>
+      </div>
+    </section>
+    <section class="cadastro-chefe">
+  <h2>Cadastre um novo Chefe</h2>
+  <form id="form-chefe">
+    <input type="text" placeholder="Nome completo" required />
+    <input type="text" placeholder="Especialidade" required />
+    <input type="text" placeholder="Restaurante vinculado" required />
+    <textarea placeholder="Descrição do chefe" rows="4" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="footer-text">
+      <h3>Tasty Cuisine</h3>
+      <p>Feito com carinho, saúde e um toque de afeto.</p>
+    </div>
+    <div class="footer-links">
+      <a href="politica.html">Política de Privacidade</a>
+      <a href="termosUso.html">Termos de Uso</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+  
+  <script>
+    function verPerfil(chefeId) {
+      window.location.href = `perfil-chefe.html?chefe=${chefeId}`;
+    }
+  </script>
+</body>
+</html>

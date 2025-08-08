@@ -1,0 +1,165 @@
+/* Layout como extensão do card */
+/*receitas-detalhes.css */ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  color: #9B5DE5;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: #9B5DE5;
+}
+
+.menu li a.active {
+  color: #9B5DE5;
+}
+
+.hero {
+  padding: 40px;
+  text-align: left;
+}
+.hero img {
+  width: 100%;
+  max-width: 1000px;
+  height: 320px;
+  border-radius: 12px;
+  background: #ccc;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+.hero p {
+  color: #ccc;
+}
+.info-bar {
+  margin: 20px 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.tag {
+  background-color: #F8BBDA;
+  color: #6C1E40;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.info-bar span {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  gap: 40px;
+}
+.ingredientes, .preparo {
+  flex: 1;
+  min-width: 300px;
+}
+h2 {
+  color: #9B5DE5;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+ul, ol {
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 10px;
+}
+.botao {
+  margin: 30px 40px;
+  text-align: center;
+}
+.botao button {
+  background-color: #F8BBDA;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+footer {
+  background: #FEC8D8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+footer h3 {
+  color: #9B5DE5;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-social i {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}

@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #FEC8D8;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  color: var(--accent-lilac);
+  font-size: 22px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+  background: #f8c4f8;
+  border-radius:70%;
+  padding: 5px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: #9B5DE5;
+}
+
+.menu li a.active {
+  color: #9B5DE5;
+}
+
+main {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.voltar {
+  margin-bottom: 20px;
+}
+
+.voltar a {
+  text-decoration: none;
+  color: #9B5DE5;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.voltar a:hover {
+  color: #7B3FD3;
+}
+
+.restaurante-detalhes {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.restaurante-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.restaurante-imagem {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.restaurante-info h1 {
+  color: #9B5DE5;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.info-item strong {
+  color: #9B5DE5;
+}
+
+.descricao {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.horarios {
+  background: #F8F6FF;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.horarios h3 {
+  color: #9B5DE5;
+  margin-bottom: 15px;
+}
+
+.horario-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #E1D5F5;
+}
+
+.mapa-container {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-container h3 {
+  color: #9B5DE5;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.mapa-placeholder {
+  height: 300px;
+  background: #F8F6FF;
+  border: 2px dashed #9B5DE5;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9B5DE5;
+}
+
+.mapa-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #FEC8D8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+footer h3 {
+  color: #9B5DE5;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-social i {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .restaurante-header {
+    grid-template-columns: 1fr;
+  }
+  
+  .restaurante-info h1 {
+    font-size: 2rem;
+  }
+}

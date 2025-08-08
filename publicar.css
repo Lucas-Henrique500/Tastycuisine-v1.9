@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+}
+
+body {
+  background-color: #9B5DE5;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  color: #9B5DE5;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: #9B5DE5;
+}
+
+.menu li a.active {
+  color: #9B5DE5;
+}
+
+main {
+  flex: 1;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #D7C2FF;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+label {
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="file"] {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  color: #333;
+  font-size: 14px;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+input[type="file"] {
+  background-color: #FFFFFF;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #9B5DE5;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #7C3AED;
+}
+
+footer {
+  background: #FEC8D8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+footer h3 {
+  color: #9B5DE5;
+}
+
+.footer-text p {
+  color: #333;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-social i {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}

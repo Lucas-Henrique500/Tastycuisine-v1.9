@@ -1,0 +1,300 @@
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FEC8D8;
+  --text-primary: #333333;
+  --text-secondary: #5f5f5f;
+  --accent-mint: #C8E6C9;
+  --accent-pink: #F8BBDA;
+  --accent-lilac: #9B5DE5;
+  --card-bg: #FFFFFF;
+  --shadow: rgba(0,0,0,0.05);
+  --lavanda: #E1D5F5;
+  --lilas-claro: #D7C2FF;
+  --cinza-claro: #F6F6F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #eee;
+}
+
+header .logo {
+  color: #9B5DE5;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: #9B5DE5;
+}
+
+.menu li a.active {
+  color: #9B5DE5;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.perfil-chefe {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.chefe-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.chefe-header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-mint);
+}
+
+.chefe-info h2 {
+  font-size: 2.5rem;
+  color: var(--accent-lilac);
+  margin-bottom: 0.5rem;
+}
+
+.chefe-info p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.chefe-detalhes h3 {
+  color: var(--accent-lilac);
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  border-bottom: 2px solid var(--accent-lilac);
+  padding-bottom: 0.5rem;
+}
+
+.chefe-detalhes p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+#chefe-especialidades-lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+#chefe-especialidades-lista li {
+  background: var(--lavanda);
+  padding: 0.8rem 1.2rem;
+  margin: 0.8rem 0;
+  border-left: 4px solid var(--accent-lilac);
+  border-radius: 12px;
+  color: var(--text-primary);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.chefe-contato p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chefe-contato i {
+  color: var(--accent-lilac);
+  width: 20px;
+}
+
+.btn-voltar {
+  display: inline-block;
+  background: var(--accent-lilac);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background: var(--accent-pink);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(155, 93, 229, 0.3);
+}
+
+footer {
+  background: var(--bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+footer h3 {
+  color: var(--accent-lilac);
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+
+.footer-social i {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-social i:hover {
+  color: var(--accent-lilac);
+}
+
+/* Seção de introdução similar às outras páginas */
+.perfil-intro {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--bg-primary);
+  margin: -2rem -1rem 2rem -1rem;
+  border-radius: 0 0 16px 16px;
+}
+
+.perfil-intro h1 {
+  font-size: 2.2rem;
+  color: var(--accent-lilac);
+  margin-bottom: 0.5rem;
+}
+
+.perfil-intro p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Melhorias nos cards de especialidades */
+#chefe-especialidades-lista li:hover {
+  transform: translateX(5px);
+  background: var(--lilas-claro);
+}
+
+/* Melhorias no botão voltar */
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-lilac);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 15px 20px;
+  }
+  
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .chefe-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .chefe-header img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .chefe-info h2 {
+    font-size: 2rem;
+  }
+  
+  main {
+    padding: 0 0.5rem;
+  }
+  
+  .perfil-chefe {
+    padding: 1.5rem;
+  }
+  
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

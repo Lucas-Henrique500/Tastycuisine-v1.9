@@ -1,0 +1,8 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#F5F5DC"/>
+  <rect x="50" y="60" width="200" height="80" fill="#228B22"/>
+  <rect x="60" y="70" width="180" height="10" fill="#ADFF2F"/>
+  <rect x="60" y="90" width="180" height="10" fill="#ADFF2F"/>
+  <rect x="60" y="110" width="180" height="10" fill="#ADFF2F"/>
+  <text x="150" y="170" text-anchor="middle" fill="#006400" font-size="12" font-family="Arial">Lasanha de Abobrinha</text>
+</svg>

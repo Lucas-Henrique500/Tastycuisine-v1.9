@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Pesquisa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="search-bar">
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="Teste a pesquisa aqui..." />
+            <button type="submit" class="search-icon">🔍</button>
+        </form>
+    </section>
+
+    <section class="receitas-em-alta">
+        <h2>Receitas em Alta</h2>
+        <div class="carrossel">
+            <div class="card-receita">
+                <div class="imagem-receita"></div>
+                <span class="tag rosa">Sobremesas Saudáveis</span>
+                <h2>Bolo de Chocolate Fit</h2>
+                <div class="info-receita">
+                    <span>🕒 30 min</span>
+                    <span>⚙ Fácil</span>
+                    <span>❤ 150</span>
+                </div>
+                <button class="ver-receita">Ver Receita</button>
+            </div>
+
+            <div class="card-receita">
+                <div class="imagem-receita"></div>
+                <span class="tag verde">Detox</span>
+                <h2>Suco Verde Detox</h2>
+                <div class="info-receita">
+                    <span>🕒 5min</span>
+                    <span>⚙ Fácil</span>
+                    <span>❤ 98</span>
+                </div>
+                <button class="ver-receita">Ver Receita</button>
+            </div>
+
+            <div class="card-receita">
+                <div class="imagem-receita"></div>
+                <span class="tag rosa">Café da Manhã</span>
+                <h2>Panquecas de Aveia</h2>
+                <div class="info-receita">
+                    <span>🕒 15min</span>
+                    <span>⚙ Fácil</span>
+                    <span>❤ 115</span>
+                </div>
+                <button class="ver-receita">Ver Receita</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="search.js"></script>
+    <script>
+        console.log('Página de teste carregada');
+        console.log('Formulário encontrado:', document.getElementById('search-form'));
+        console.log('Input encontrado:', document.getElementById('search-input'));
+        console.log('Cards encontrados:', document.querySelectorAll('.card-receita').length);
+    </script>
+</body>
+</html>

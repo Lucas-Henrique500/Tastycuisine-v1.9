@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publicar Receita - Tasty Cuisine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="publicar.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Tasty Cuisine</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="por_ingredientes.html">Por Ingredientes</a></li>
+        <li><a href="dicas_saudaveis.html">Dicas Saudáveis</a></li>
+        <li><a href="chefes.html">Chefes</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Publique Sua Receita</h1>
+    <p class="subtitulo">Compartilhe suas criações culinárias saudáveis com a comunidade Tasty Cuisine!</p>
+
+    <form class="formulario">
+      <label for="nome">Nome da Receita</label>
+      <input type="text" id="nome" placeholder="Ex: Smoothie de Frutas Vermelhas" />
+
+      <label for="descricao">Descrição Curta</label>
+      <textarea id="descricao" placeholder="Uma breve descrição da sua receita..."></textarea>
+
+      <label for="ingredientes">Ingredientes (um por linha)</label>
+      <textarea id="ingredientes" placeholder="1 xícara de aveia&#10;2 bananas maduras&#10;..."></textarea>
+
+      <label for="preparo">Instruções de Preparo</label>
+      <textarea id="preparo" placeholder="Passo 1: Misture todos os ingredientes...&#10;Passo 2: Leve ao forno por X minutos..."></textarea>
+
+      <label for="categoria">Categoria</label>
+      <select id="categoria">
+        <option>Selecione uma categoria</option>
+        <option>Café da Manhã</option>
+        <option>Almoço</option>
+        <option>Lanche</option>
+        <option>Jantar</option>
+        <option>Vegano</option>
+        <option>Fitness</option>
+      </select>
+
+      <label for="imagem">Imagem da Receita (Opcional)</label>
+      <input type="file" id="imagem" />
+
+      <button type="submit">Publicar Receita</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-text">
+      <h3>Tasty Cuisine</h3>
+      <p>Feito com carinho, saúde e um toque de afeto.</p>
+    </div>
+    <div class="footer-links">
+      <a href="politica.html">Política de Privacidade</a>
+      <a href="termosUso.html">Termos de Uso</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+  <script src="theme.js"></script>
+</body>
+</html>

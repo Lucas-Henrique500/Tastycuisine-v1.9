@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasty Cuisine - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Tasty Cuisine</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="por_ingredientes.html">Por Ingredientes</a></li>
+        <li><a href="dicas_saudaveis.html">Dicas Saudáveis</a></li>
+        <li><a href="chefes.html">Chefes</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Comida de verdade, <br /> sabor de sobra.</h1>
+    <p>Receitas deliciosas criadas com amor e diversão!</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" id="btn-explorar-receitas">Explorar receitas</button>
+      <button class="btn-outline" id="btn-cadastrar-receita">Cadastrar Receita</button>
+    </div>
+  </section>
+
+  <section class="search-bar">
+    <form id="search-form" class="search-form">
+      <input type="text" id="search-input" placeholder="Buscar por ingrediente ou tipo de receita saudável…" />
+      <button type="submit" class="search-icon">🔍</button>
+    </form>
+  </section>
+
+  <section class="categorias">
+  <h2 class="titulo-categorias">Categorias</h2>
+  <div class="categoria-carrossel">
+    <div class="categoria rosa" data-categoria="cafe-da-manha">Café da Manhã</div>
+    <div class="categoria verde" data-categoria="snacks">Snacks</div>
+    <div class="categoria lilas" data-categoria="marmitas-fit">Marmitas Fit</div>
+    <div class="categoria lavanda" data-categoria="veganas">Veganas</div>
+    <div class="categoria verde" data-categoria="detox">Detox</div>
+    <div class="categoria lilas" data-categoria="low-carb">Low Carb</div>
+    <div class="categoria rosa" data-categoria="sobremesas-saudaveis">Sobremesas Saudáveis</div>
+  </div>
+  </section>
+  
+  <section class="receitas-em-alta">
+  <div class="secao-topo">
+    <h2>Receitas em Alta</h2>
+  </div>
+  <div class="carrossel-container">
+    <button class="carrossel-btn prev" data-carrossel="carrossel-alta">‹</button>
+    <div class="carrossel" id="carrossel-alta">
+    <!-- Cards vão aqui -->
+     <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/bolo-chocolate-fit.svg')"></div>
+        <span class="tag rosa">Sobremesas Saudáveis</span>
+        <h2>Bolo de Chocolate Fit</h2>
+        <div class="info-receita">
+          <span>🕒 30 min</span>
+          <span>⚙ Fácil</span>
+          <span>❤ 150</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/brownie-fit.svg')"></div>
+        <span class="tag rosa">Sobremesas Saudáveis</span>
+        <h2>Brownie Fit Zero Açúcar</h2>
+        <div class="info-receita">
+          <span>🕒 40 min</span>
+          <span>⚙ Médio</span>
+          <span>❤ 130</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/smoothie-bowl.svg')"></div>
+        <span class="tag rosa">Café da Manhã</span>
+        <h2>Smoothie Bowl Tropical</h2>
+        <div class="info-receita">
+          <span>🕒 10 min</span>
+          <span>⚙ Fácil</span>
+          <span>❤ 120</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/panquecas-aveia.svg')"></div>
+        <span class="tag rosa">Café da Manhã</span>
+        <h2>Panquecas de Aveia</h2>
+        <div class="info-receita">
+          <span>🕒 15min</span>
+          <span>⚙ Fácil</span>
+          <span>❤ 115</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/smoothie-verde.svg')"></div>
+        <span class="tag verde">Detox</span>
+        <h2>Suco Verde Detox</h2>
+        <div class="info-receita">
+          <span>🕒 5min</span>
+          <span>⚙ Fácil</span>
+          <span>❤ 98</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/omelete-vegetais.svg')"></div>
+        <span class="tag lilas">Low Carb</span>
+        <h2>Omelete Fit</h2>
+        <div class="info-receita">
+          <span>🕒 10min</span>
+          <span>⚙ Fácil</span>
+          <span>❤ 87</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+      
+    </div>
+    <button class="carrossel-btn next" data-carrossel="carrossel-alta">›</button>
+  </div>
+</section>
+
+<section class="mais-amadas">
+  <div class="secao-topo">
+    <h2>Mais Amadas da Semana</h2>
+  </div>
+  <div class="carrossel-container">
+    <button class="carrossel-btn prev" data-carrossel="carrossel-amadas">‹</button>
+    <div class="carrossel" id="carrossel-amadas">
+    <!-- Cards vão aqui -->
+     
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/salmao-legumes.svg')"></div>
+        <span class="tag lilas">Marmitas Fit</span>
+        <h2>Salmão Assado com Legumes</h2>
+        <div class="info-receita">
+          <span>🕒 35min</span>
+          <span>⚙ Médio</span>
+          <span>❤ 105</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/lasanha-abobrinha.svg')"></div>
+        <span class="tag lavanda">Vegano</span>
+        <h2>Lasanha de Abobrinha Vegana</h2>
+        <div class="info-receita">
+          <span>🕒 45min</span>
+          <span>⚙ Médio</span>
+          <span>❤ 95</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/sopa-lentilha.svg')"></div>
+        <span class="tag verde">Snacks</span>
+        <h2>Sopa de Lentilha Nutritiva</h2>
+        <div class="info-receita">
+          <span>🕒 45min</span>
+          <span>⚙ Médio</span>
+          <span>❤ 65</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/smoothie-verde.svg')"></div>
+        <span class="tag verde">Detox</span>
+        <h2>Smoothie Verde Energético</h2>
+        <div class="info-receita">
+          <span>🕒 5min</span>
+          <span>⚙ Muito Fácil</span>
+          <span>❤ 70</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/crackers-integrais.svg')"></div>
+        <span class="tag verde">Snacks</span>
+        <h2>Cookies Integrais</h2>
+        <div class="info-receita">
+          <span>🕒 25min</span>
+          <span>⚙ Médio</span>
+          <span>❤ 92</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+
+      <div class="card-receita">
+        <div class="imagem-receita" style="background-image: url('assets/frango-temperado.svg')"></div>
+        <span class="tag lilas">Marmitas Fit</span>
+        <h2>Frango com Batata Doce</h2>
+        <div class="info-receita">
+          <span>🕒 40min</span>
+          <span>⚙ Médio</span>
+          <span>❤ 88</span>
+        </div>
+        <button class="ver-receita">Ver Receita</button>
+        <span class="favorito ativo">❤</span>
+      </div>
+    </div>
+    <button class="carrossel-btn next" data-carrossel="carrossel-amadas">›</button>
+  </div>
+</section>
+
+  <section class="ingredientes">
+    <h2>Ingredientes da Natureza</h2>
+    <div class="scroll-h">
+       <div class="card"> <div class="img-placeholder" style="background-image: url('assets/aveia.svg'); background-size: cover; background-position: center;"></div> <p>Aveia</p> </div>
+      <div class="card"> <div class="img-placeholder" style="background-image: url('assets/chia.svg'); background-size: cover; background-position: center;"></div> <p>Chia</p> </div>
+      <div class="card"> <div class="img-placeholder" style="background-image: url('assets/banana.svg'); background-size: cover; background-position: center;"></div> <p>Banana</p> </div>
+      <div class="card"> <div class="img-placeholder" style="background-image: url('assets/castanhas.svg'); background-size: cover; background-position: center;"></div> <p>Castanhas</p> </div>
+      <div class="card"> <div class="img-placeholder" style="background-image: url('assets/cacau.svg'); background-size: cover; background-position: center;"></div> <p>Cacau</p> </div>
+      <div class="card"> <div class="img-placeholder" style="background-image: url('assets/linhaca.svg'); background-size: cover; background-position: center;"></div> <p>Linhaça</p> </div>
+    </div>
+  </section>
+
+  <section class="depoimentos">
+    <h2>O que nossos usuários dizem</h2>
+    <div class="depoimentos-container">
+      <div class="depoimento">
+        <p>"Nunca cozinhei tão saudável e gostoso ao mesmo tempo! As receitas são incríveis e fáceis de seguir."</p>
+        <strong>- Ana Paula S.</strong>
+      </div>
+      <div class="depoimento">
+        <p>"O Tasty Cuisine transformou minha relação com a comida. Finalmente consigo comer saudável sem abrir mão do sabor!"</p>
+        <strong>- João Victor M.</strong>
+      </div>
+      <div class="depoimento">
+        <p>"Adoro a variedade de receitas e o visual do site é super inspirador. Minha família toda aprovou!"</p>
+        <strong>- Mariana L.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="ebook-form">
+    <h3>Receba um e-book grátis com 10 receitas funcionais!</h3>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <button type="submit">Quero meu e-book!</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-text">
+      <h3>Tasty Cuisine</h3>
+      <p>Feito com carinho, saúde e um toque de afeto.</p>
+    </div>
+    <div class="footer-links">
+      <a href="politica.html">Política de Privacidade</a>
+      <a href="termosUso.html">Termos de Uso</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="search.js"></script>
+  <script src="update-tags.js"></script>
+  <script src="theme.js"></script>
+  <script>
+    document.getElementById('btn-cadastrar-receita').addEventListener('click', function() {
+      window.location.href = 'publicar.html';
+    });
+    
+    document.getElementById('btn-explorar-receitas').addEventListener('click', function() {
+      window.location.href = 'receitas.html';
+    });
+  </script>
+</body>
+</html>
