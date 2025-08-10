@@ -33,14 +33,14 @@
   <main class="perfil-container">
     <aside class="perfil-card">
       <div class="foto-perfil" style="background-image: url('assets/luquinhas.jpeg'); background-size: cover; background-position: center;"></div>
-      <h2>Luquinhas Fritadas</h2>
-      <p class="email">ayrtonsenna@gmail.com</p>
+      <h2 id="sidebar-name">Luquinhas Fritadas</h2>
+      <p class="email" id="sidebar-email">ayrtonsenna@gmail.com</p>
       <div class="progresso">
-        <p>Progresso do Perfil (75%)</p>
-        <div class="barra"><div class="preenchida"></div></div>
+        <p id="sidebar-progress-text">Progresso do Perfil (75%)</p>
+        <div class="barra"><div class="preenchida" id="sidebar-progress-bar"></div></div>
       </div>
       <p>Minhas Dietas Preferidas:</p>
-      <div class="tags">
+      <div class="tags" id="sidebar-diets">
         <span class="tag verde">Vegana</span>
         <span class="tag verde">Low Carb</span>
       </div>
@@ -49,49 +49,36 @@
     <section class="conteudo-perfil">
       <div class="abas">
         <button class="aba ativa" data-alvo="info"><i class="fas fa-user"></i> Informações</button>
-        <button class="aba" data-alvo="receitas"><i class="fas fa-utensils"></i> Minhas Receitas</button>
-        <button class="aba" data-alvo="favoritas"><i class="fas fa-heart"></i> Favoritas</button>
+                <button class="aba" data-alvo="favoritas"><i class="fas fa-heart"></i> Favoritas</button>
         <button class="aba" data-alvo="publicadas"><i class="fas fa-upload"></i> Publicadas</button>
       </div>
 
       <div class="conteudo info ativa" id="info">
         <h3>Informações Pessoais</h3>
-        <label>Nome</label>
-        <input type="text" value="Luquinhas Fritadas" />
+        <label>Nome Completo</label>
+        <input id="profile-fullname" type="text" value="Luquinhas Fritadas" />
+        <label>Nome de Usuário</label>
+        <input id="profile-username" type="text" value="luquinhasfritadas" />
         <label>Email</label>
-        <input type="email" value="ayrtonsenna@gmail.com" />
-        <button class="btn-roxo">Salvar Alterações</button>
+        <input id="profile-email" type="email" value="ayrtonsenna@gmail.com" />
+        <label>Data de Nascimento</label>
+        <input id="profile-dob" type="date" />
+        <label>Senha</label>
+        <input id="profile-password" type="password" placeholder="Defina ou altere sua senha" />
+        <label>Restrições Alimentares e Alergias</label>
+        <input id="profile-restrictions" type="text" placeholder="Ex.: intolerância à lactose, alergia a amendoim" />
+        <label>Dietas Favoritas (separe por vírgulas)</label>
+        <input id="profile-diets" type="text" value="Vegana, Low Carb" placeholder="Ex.: Vegana, Low Carb" />
+        <label>Tipo de Conta</label>
+        <select id="profile-account-type">
+          <option value="chefe">Chefe</option>
+          <option value="restaurante">Restaurante</option>
+          <option value="usuario" selected>Usuário Comum</option>
+        </select>
+        <button class="btn-roxo" id="btn-salvar-perfil">Salvar Alterações</button>
       </div>
 
-      <div class="conteudo receitas" id="receitas">
-        <h3>Minhas Receitas</h3>
-        <div class="cards-receitas">
-          <div class="card">
-            <div class="imagem" style="background-image: url('assets/smoothie-verde.svg')"></div>
-            <div class="categoria">Café da Manhã</div>
-            <h4>Smoothie Verde Energético</h4>
-            <div class="info-receita">
-              <span><i class="fas fa-clock"></i> 5 min</span>
-              <span><i class="fas fa-signal"></i> Muito Fácil</span>
-              <span><i class="fas fa-heart"></i> 45</span>
-            </div>
-            <button class="btn-roxo">Ver Receita</button>
-          </div>
-          <div class="card">
-            <div class="imagem" style="background-image: url('assets/curry-grao-bico.svg')"></div>
-            <div class="categoria">Vegano</div>
-            <h4>Curry de Grão de Bico</h4>
-            <div class="info-receita">
-              <span><i class="fas fa-clock"></i> 40 min</span>
-              <span><i class="fas fa-signal"></i> Médio</span>
-              <span><i class="fas fa-heart"></i> 60</span>
-            </div>
-            <button class="btn-roxo">Ver Receita</button>
-          </div>
-        </div>
-        <button class="btn-verde">+ Adicionar Nova Receita</button>
-      </div>
-
+      
       <div class="conteudo favoritas" id="favoritas">
         <!-- Conteúdo será carregado dinamicamente -->
       </div>

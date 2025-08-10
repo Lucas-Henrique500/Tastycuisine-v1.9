@@ -1599,6 +1599,54 @@ const receitas = {
       'Cubra com queijo.',
       'Asse por 30 minutos.'
     ]
+  },
+  'sopa-creme-abobora': {
+    nome: 'Sopa Cremosa de Abóbora',
+    categoria: 'Vegano',
+    tempo: '35 min',
+    dificuldade: 'Fácil',
+    favoritos: 45,
+    classificacao: 4.6,
+    ingredientes: [
+      '500g de abóbora cabotiá em cubos',
+      '1 cebola média picada',
+      '2 dentes de alho picados',
+      '700ml de caldo de legumes',
+      '1/2 xícara de leite de coco',
+      'Azeite, sal e pimenta a gosto',
+      'Salsinha para finalizar'
+    ],
+    preparo: [
+      'Refogue a cebola e o alho no azeite até dourar levemente.',
+      'Adicione a abóbora e o caldo de legumes, cozinhe até ficar macia.',
+      'Bata no liquidificador ou mixer até obter um creme liso.',
+      'Volte à panela, acrescente o leite de coco e ajuste o sal e a pimenta.',
+      'Aqueça por mais 2-3 minutos, finalize com salsinha e sirva.'
+    ]
+  },
+  'wrap-frango-avocado': {
+    nome: 'Wrap de Frango com Avocado',
+    categoria: 'Low Carb',
+    tempo: '20 min',
+    dificuldade: 'Fácil',
+    favoritos: 52,
+    classificacao: 4.5,
+    ingredientes: [
+      '1 tortilha integral grande',
+      '150g de peito de frango grelhado em tiras',
+      '1/2 avocado fatiado',
+      'Folhas de alface',
+      'Tomate em cubos',
+      '2 colheres de iogurte natural',
+      'Suco de 1/2 limão',
+      'Sal e pimenta a gosto'
+    ],
+    preparo: [
+      'Misture o iogurte com suco de limão, sal e pimenta para fazer o molho.',
+      'Espalhe o molho sobre a tortilha e adicione alface e tomate.',
+      'Distribua o frango e o avocado por cima.',
+      'Enrole firmemente o wrap e corte ao meio para servir.'
+    ]
   }
 };
 

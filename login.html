@@ -7,27 +7,10 @@
   <link rel="stylesheet" href="login.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script defer src="login.js"></script>
 </head>
 <body>
-  <header>
-    <h1 class="logo">Tasty Cuisine</h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="receitas.html">Receitas</a></li>
-        <li><a href="por_ingredientes.html">Por Ingredientes</a></li>
-        <li><a href="dicas_saudaveis.html">Dicas Saudáveis</a></li>
-        <li><a href="chefes.html">Chefes</a></li>
-        <li><a href="restaurantes.html">Restaurantes</a></li>
-        <li><a href="consulta.html">Consulta</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="perfil.html">Perfil</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
-  
+    
   <main class="main-content">
     <div class="login-container">
       <h1>Entrar</h1>
@@ -39,25 +22,38 @@
         <input type="password" id="senha" placeholder="Digite sua senha" required />
 
         <button type="submit">Acessar</button>
-        <p class="cadastro">Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        <p class="cadastro">Não tem uma conta? <a href="#" id="link-cadastre-se">Cadastre-se</a></p>
+      </form>
+
+      <form class="login-form register-form" id="register-form" style="display:none">
+        <label for="reg-fullname">Nome Completo</label>
+        <input type="text" id="reg-fullname" placeholder="Digite seu nome completo" required />
+
+        <label for="reg-username">Nome de Usuário</label>
+        <input type="text" id="reg-username" placeholder="Escolha um nome de usuário" required />
+
+        <label for="reg-dob">Data de Nascimento</label>
+        <input type="date" id="reg-dob" required />
+
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" placeholder="Seu e-mail" required />
+
+        <label for="reg-password">Senha</label>
+        <input type="password" id="reg-password" placeholder="Crie uma senha" required />
+
+        <label for="reg-account-type">Tipo de Conta</label>
+        <select id="reg-account-type" required>
+          <option value="chefe">Chefe</option>
+          <option value="restaurante">Restaurante</option>
+          <option value="usuario" selected>Usuário Comum</option>
+        </select>
+
+        <button type="button" id="btn-concluir-cadastro">Concluir Cadastro</button>
+        <p class="cadastro">Já tem uma conta? <a href="#" id="link-voltar-login">Voltar ao login</a></p>
       </form>
     </div>
   </main>
 
-   <footer>
-    <div class="footer-text">
-      <h3>Tasty Cuisine</h3>
-      <p>Feito com carinho, saúde e um toque de afeto.</p>
-    </div>
-    <div class="footer-links">
-      <a href="politica.html">Política de Privacidade</a>
-      <a href="termosUso.html">Termos de Uso</a>
-    </div>
-    <div class="footer-social">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-    </div>
-  </footer>
-</body>
+   </body>
 </html>
 

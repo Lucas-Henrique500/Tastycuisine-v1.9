@@ -71,11 +71,13 @@ nav a.active {
 
 .foto-container {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .foto-container img {
   width: 100%;
-  max-width: 300px;
+  max-width: 380px;
   height: auto;
 }
 
@@ -160,6 +162,66 @@ nav a.active {
   color: #9B5DE5;
   font-weight: 500;
   margin-top: 30px;
+}
+
+/* App Mobile */
+.app-mobile-secao {
+  margin-top: 60px;
+  padding: 40px 0;
+}
+
+.app-aviso {
+  background: linear-gradient(135deg, #d280eb);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  box-shadow: 0 8px 25px rgba(155, 93, 229, 0.3);
+}
+
+.app-icone {
+  font-size: 60px;
+  opacity: 0.9;
+}
+
+.app-texto h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.app-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.app-botoes {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-app {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-app:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Responsividade */

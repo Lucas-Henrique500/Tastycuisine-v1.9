@@ -111,6 +111,17 @@ nav ul {
   font-size: 1rem;
 }
 
+.login-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: #D7C2FF;
+  color: #333;
+  font-size: 1rem;
+}
+
 .login-form input::placeholder {
   color: #bbb;
 }

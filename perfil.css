@@ -179,6 +179,23 @@ nav ul {
   border-radius: 6px;
 }
 
+.conteudo select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 48px;
+}
+
+.conteudo textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
 .btn-roxo {
   margin-top: 20px;
   padding: 12px;
@@ -317,4 +334,13 @@ footer h3 {
   margin-left: 15px;
   font-size: 1.2rem;
   color: #333;
+}
+
+/* Ajuste de tamanho dos rótulos (tags) nos cards do perfil */
+.conteudo-perfil .card .tag {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 8px;
 }

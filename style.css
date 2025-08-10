@@ -45,13 +45,9 @@ header {
 
 .logo {
   color: var(--accent-lilac);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: normal;
   transition: color 0.3s ease;
-  background: #f8c4f8;
-  border-radius:70%;
-  padding: 5px;
-
 }
 
 nav {
@@ -562,6 +558,17 @@ footer h3 {
 .tag.verde { background: var(--accent-mint); color: var(--text-primary); }
 .tag.lilas { background: var(--lilas-claro); color: var(--text-primary); }
 .tag.lavanda { background: var(--lavanda); color: var(--text-primary); }
+
+/* Padroniza tamanho dos rótulos nos cards (Home/Receitas) igual à aba Publicadas */
+.card-receita .tag {
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 1rem !important;
+  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px !important;
+}
 
 
 
@@ -1080,4 +1087,46 @@ button:hover {
   background: var(--accent-pink);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(156, 39, 176, 0.3);
+}
+
+/* ===== Padronização global de Menus (como Sobre) ===== */
+header {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #eee !important;
+}
+header .logo {
+  color: var(--accent-lilac) !important;
+}
+header nav ul.menu a {
+  margin-left: 20px !important;
+  text-decoration: none !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+}
+header nav ul.menu a.active {
+  color: var(--accent-lilac) !important;
+}
+
+/* ===== Padronização global de Rodapés (como Home) ===== */
+footer {
+  background: var(--bg-secondary) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 30px 40px !important;
+  margin-top: 60px !important;
+  flex-wrap: wrap !important;
+}
+footer h3 {
+  color: var(--accent-lilac) !important;
+}
+.footer-links a {
+  margin: 0 12px !important;
+  text-decoration: none !important;
+  color: var(--text-secondary) !important;
+}
+.footer-social i {
+  margin-left: 15px !important;
+  font-size: 1.2rem !important;
+  color: var(--text-primary) !important;
 }
