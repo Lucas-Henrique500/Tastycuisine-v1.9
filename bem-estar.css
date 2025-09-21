@@ -1,0 +1,299 @@
+/* Estilos específicos para a página Bem-Estar */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  color: var(--accent-lilac);
+  font-size: 22px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+  background: #f8c4f8;
+  border-radius: 70%;
+  padding: 5px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: #9B5DE5;
+}
+
+.menu li a.active {
+  color: #9B5DE5;
+}
+
+/* Container principal */
+.bem-estar-container {
+  padding: 2rem 1rem;
+}
+
+/* Seção Dicas Saudáveis */
+.dicas-section {
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.titulo-destaque {
+  font-size: 2rem;
+  color: var(--accent-lilac);
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.dicas-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .dicas-lista {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dica-card {
+  background-color: var(--card-bg);
+  border-radius: 1.5rem;
+  padding: 1.2rem;
+  text-align: left;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.dica-card:hover {
+  transform: translateY(-4px);
+}
+
+.dica-card h2 {
+  font-size: 1.2rem;
+  color: var(--accent-lilac);
+  margin-bottom: 0.5rem;
+}
+
+.dica-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.botao-dica {
+  background: var(--accent-lilac);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 0.8rem;
+}
+
+.botao-dica:hover {
+  background: var(--accent-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(156, 39, 176, 0.3);
+}
+
+/* Cores dos cards */
+.rosa {
+  background-color: var(--accent-pink);
+}
+
+.lavanda {
+  background-color: var(--lavanda);
+}
+
+.verde {
+  background-color: var(--accent-mint);
+}
+
+.lilas {
+  background-color: var(--lilas-claro);
+}
+
+/* Seção Consulta */
+.consulta-section {
+  text-align: center;
+  padding-top: 60px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.consulta-section h2 {
+  font-size: 32px;
+  color: #9B5DE5;
+  margin-bottom: 40px;
+}
+
+.nutricionistas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #E1D5F5;
+  border: 2px solid #D7C2FF;
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  color: #9B5DE5;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.card a {
+  color: #fff;
+  background-color: #9B5DE5;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+/* Layout responsivo */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background: #FEC8D8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+footer h3 {
+  color: #9B5DE5;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-social i {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bem-estar-container {
+    padding: 20px;
+  }
+  
+  .titulo-destaque {
+    font-size: 2rem;
+  }
+  
+  .dicas-lista {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .nutricionistas {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
