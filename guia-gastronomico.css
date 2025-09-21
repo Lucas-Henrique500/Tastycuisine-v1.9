@@ -82,12 +82,81 @@ main {
   color: #555;
 }
 
+.chefes-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.indique-chefe-form {
+  flex: 0 0 300px;
+  text-align: center;
+  background: #E1D5F5;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.indique-chefe-form h3 {
+  color: #9B5DE5;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.indique-chefe-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.indique-chefe-form input,
+.indique-chefe-form button {
+  padding: 0.9rem;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+}
+
+.indique-chefe-form input {
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+.indique-chefe-form button {
+  background: #9B5DE5;
+  color: #FFFFFF;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.indique-chefe-form button:hover {
+  background: #D7C2FF;
+  color: #333;
+}
+
 .chefes-lista {
+  flex: 1;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .chefes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .indique-chefe-form {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
 }
 
 .chefe-card {
@@ -134,51 +203,7 @@ main {
   font-weight: bold;
 }
 
-.cadastro-chefe {
-  margin-bottom: 80px;
-  padding: 40px 20px;
-  background: #E1D5F5;
-  border-top: 2px dashed #9B5DE5;
-}
 
-.cadastro-chefe h2 {
-  color: #9B5DE5;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-#form-chefe {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#form-chefe input,
-#form-chefe textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  font-size: 1rem;
-  outline-color: #9B5DE5;
-}
-
-#form-chefe button {
-  background: #9B5DE5;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#form-chefe button:hover {
-  background: #D7C2FF;
-  color: #333;
-}
 
 /* Seção Restaurantes */
 .restaurantes-intro {
@@ -199,11 +224,32 @@ main {
   color: #555;
 }
 
+.restaurantes-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
 .restaurantes-grid {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 25px;
-  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .restaurantes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .indique-restaurante-form {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 30px;
+  }
 }
 
 .restaurante-card {
@@ -252,48 +298,49 @@ main {
   color: #333;
 }
 
-.cadastro-restaurante {
-  background: #E1D5F5;
-  padding: 40px 20px;
-  border-top: 3px dashed #9B5DE5;
-  border-radius: 20px;
-}
-
-.cadastro-restaurante h2 {
-  color: #9B5DE5;
-  margin-bottom: 20px;
+.indique-restaurante-form {
+  flex: 0 0 300px;
   text-align: center;
+  padding: 1.5rem;
+  background: #E1D5F5;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
-#form-restaurante {
-  max-width: 600px;
-  margin: 0 auto;
+.indique-restaurante-form h3 {
+  color: #9B5DE5;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.indique-restaurante-form form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
 
-#form-restaurante input,
-#form-restaurante textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  font-size: 1rem;
-  outline-color: #9B5DE5;
-}
-
-#form-restaurante button {
-  background: #9B5DE5;
-  color: white;
-  padding: 12px;
-  border: none;
+.indique-restaurante-form input,
+.indique-restaurante-form button {
+  padding: 0.9rem;
   border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  border: 2px solid #ccc;
+  font-size: 1rem;
 }
 
-#form-restaurante button:hover {
+.indique-restaurante-form input {
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+.indique-restaurante-form button {
+  background: #9B5DE5;
+  color: #FFFFFF;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.indique-restaurante-form button:hover {
   background: #D7C2FF;
   color: #333;
 }

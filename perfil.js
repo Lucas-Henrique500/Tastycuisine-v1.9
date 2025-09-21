@@ -448,4 +448,14 @@ document.addEventListener('DOMContentLoaded', () => {
       else alert('Perfil salvo com sucesso!');
     });
   }
+
+  // Botão Sair
+  const btnSair = document.getElementById('btn-sair');
+  if (btnSair) {
+    btnSair.addEventListener('click', () => {
+      if (confirm('Tem certeza que deseja sair?')) {
+        window.location.href = 'login.html';
+      }
+    });
+  }
 });
