@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const carrosselId = btn.getAttribute('data-carrossel');
       const carrossel = document.getElementById(carrosselId);
-      const scrollAmount = 280;
+      const scrollAmount = 320;
       
       if (btn.classList.contains('prev')) {
         carrossel.scrollLeft -= scrollAmount;
