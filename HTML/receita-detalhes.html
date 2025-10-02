@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty Cuisine - Receita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/receita-detalhes.css">
+  <link rel="stylesheet" href="../CSS/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Tasty Cuisine</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="bem-estar.html">Bem-Estar</a></li>
+        <li><a href="guia-gastronomico.html">Guia Gastronômico</a></li>
+        
+        
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="assets/bolo-chocolate-fit.svg" alt="Imagem da Receita" style="width: 100%; height: 320px; object-fit: cover;">
+    <h1 id="receita-nome">Carregando...</h1>
+    <p>Uma receita deliciosa e saudável para você!</p>
+  </div>
+
+  <div class="info-bar">
+    <span class="tag" id="receita-categoria">Categoria</span>
+    <span>⏱ <span id="receita-tempo">-- min</span></span>
+    <span>💧 <span id="receita-dificuldade">--</span></span>
+    <span>❤ <span id="receita-favoritos">--</span></span>
+    <span id="estrelas">⭐⭐⭐⭐⭐</span>
+    <span>(<span id="nota">--</span>)</span>
+  </div>
+
+  <div class="container">
+    <div class="ingredientes">
+      <h2>Ingredientes</h2>
+      <ul id="lista-ingredientes">
+        <li>Carregando ingredientes...</li>
+      </ul>
+    </div>
+
+    <div class="preparo">
+      <h2>Modo de Preparo</h2>
+      <ol id="lista-preparo">
+        <li>Carregando modo de preparo...</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="botao">
+    <button id="btn-favorito"><span id="favorito-icon">🤍</span> <span id="favorito-text">Adicionar aos Favoritos</span></button>
+  </div>
+
+  <footer>
+    <div class="footer-text">
+      <h3>Tasty Cuisine</h3>
+      <p>Feito com carinho, saúde e um toque de afeto.</p>
+    </div>
+    <div class="footer-links">
+      <a href="politica.html">Política de Privacidade</a>
+      <a href="termosUso.html">Termos de Uso</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+  <script src="../JAVASCRIPT/receita-detalhes.js"></script>
+</body>
+</html>

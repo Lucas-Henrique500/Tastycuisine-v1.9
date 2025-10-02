@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil - Tasty Cuisine</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/perfil.css" />
+  <script defer src="../JAVASCRIPT/perfil.js"></script>
+  <link rel="stylesheet" href="../CSS/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">Tasty Cuisine</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="bem-estar.html">Bem-Estar</a></li>
+        <li><a href="guia-gastronomico.html">Guia Gastronômico</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="perfil-container">
+    <aside class="perfil-card">
+      <div class="foto-perfil" style="background-image: url('../assets/luquinhas.jpeg'); background-size: cover; background-position: center;"></div>
+      <h2 id="sidebar-name">Luquinhas Fritadas</h2>
+      <p class="email" id="sidebar-email">ayrtonsenna@gmail.com</p>
+      <div class="progresso">
+        <p id="sidebar-progress-text">Progresso do Perfil (75%)</p>
+        <div class="barra"><div class="preenchida" id="sidebar-progress-bar"></div></div>
+      </div>
+      <p>Minhas Dietas Preferidas:</p>
+      <div class="tags" id="sidebar-diets">
+        <span class="tag verde">Vegana</span>
+        <span class="tag verde">Low Carb</span>
+      </div>
+      <button class="btn-sair" id="btn-sair">Sair</button>
+
+    </aside>
+
+    <section class="conteudo-perfil">
+      <div class="abas">
+        <button class="aba ativa" data-alvo="info"><i class="fas fa-user"></i> Informações</button>
+                <button class="aba" data-alvo="favoritas"><i class="fas fa-heart"></i> Favoritas</button>
+        <button class="aba" data-alvo="publicadas"><i class="fas fa-upload"></i> Publicadas</button>
+      </div>
+
+      <div class="conteudo info ativa" id="info">
+        <h3>Informações Pessoais</h3>
+        <label>Nome Completo</label>
+        <input id="profile-fullname" type="text" value="Luquinhas Fritadas" />
+        <label>Nome de Usuário</label>
+        <input id="profile-username" type="text" value="luquinhasfritadas" />
+        <label>Email</label>
+        <input id="profile-email" type="email" value="ayrtonsenna@gmail.com" />
+        <label>Data de Nascimento</label>
+        <input id="profile-dob" type="date" />
+        <label>Senha</label>
+        <input id="profile-password" type="password" placeholder="Defina ou altere sua senha" />
+        <label>Restrições Alimentares e Alergias</label>
+        <input id="profile-restrictions" type="text" placeholder="Ex.: intolerância à lactose, alergia a amendoim" />
+        <label>Dietas Favoritas (separe por vírgulas)</label>
+        <input id="profile-diets" type="text" value="Vegana, Low Carb" placeholder="Ex.: Vegana, Low Carb" />
+        <label>Tipo de Conta</label>
+        <select id="profile-account-type">
+          <option value="chefe">Chefe</option>
+          <option value="restaurante">Restaurante</option>
+          <option value="usuario" selected>Usuário Comum</option>
+        </select>
+        <button class="btn-roxo" id="btn-salvar-perfil">Salvar Alterações</button>
+      </div>
+
+      
+      <div class="conteudo favoritas" id="favoritas">
+        <!-- Conteúdo será carregado dinamicamente -->
+      </div>
+
+      <div class="conteudo publicadas" id="publicadas">
+        <!-- Conteúdo será carregado dinamicamente -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-text">
+      <h3>Tasty Cuisine</h3>
+      <p>Feito com carinho, saúde e um toque de afeto.</p>
+    </div>
+    <div class="footer-links">
+      <a href="politica.html">Política de Privacidade</a>
+      <a href="termosUso.html">Termos de Uso</a>
+    </div>
+    <div class="footer-social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+  <script src="../JAVASCRIPT/theme.js"></script>
+</body>
+</html>
