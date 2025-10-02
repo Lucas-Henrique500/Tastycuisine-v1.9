@@ -2,7 +2,27 @@
 
 
 
-// Mapeamento de nomes de receitas para IDs
+// Configurações e dados
+const CONFIG = {
+  SEARCH_MIN_LENGTH: 2,
+  HIGHLIGHT_DURATION: 3000,
+  SCROLL_AMOUNT: 320,
+  DEBOUNCE_DELAY: 300
+};
+
+// Função utilitária debounce
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
 const receitaIds = {
   'Bolo de Chocolate Fit': 'bolo-chocolate-fit',
   'Brownie Fit Zero Açúcar': 'brownie-fit',
@@ -176,7 +196,17 @@ function handleCardClick(e) {
 // Sistema de favoritos
 class FavoritosManager {
   constructor() {
-    this.favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    this.storageKey = 'favoritos';
+    this.favoritos = this.loadFavoritos();
+  }
+
+  loadFavoritos() {
+    try {
+      return JSON.parse(localStorage.getItem(this.storageKey)) || [];
+    } catch (error) {
+      console.warn('Erro ao carregar favoritos:', error);
+      return [];
+    }
   }
 
   isFavorito(receitaId) {
@@ -184,13 +214,22 @@ class FavoritosManager {
   }
 
   toggleFavorito(receitaId) {
-    if (this.isFavorito(receitaId)) {
-      this.favoritos = this.favoritos.filter(id => id !== receitaId);
+    const index = this.favoritos.indexOf(receitaId);
+    if (index > -1) {
+      this.favoritos.splice(index, 1);
     } else {
       this.favoritos.push(receitaId);
     }
-    localStorage.setItem('favoritos', JSON.stringify(this.favoritos));
+    this.saveFavoritos();
     return this.isFavorito(receitaId);
+  }
+
+  saveFavoritos() {
+    try {
+      localStorage.setItem(this.storageKey, JSON.stringify(this.favoritos));
+    } catch (error) {
+      console.warn('Erro ao salvar favoritos:', error);
+    }
   }
 }
 
@@ -275,14 +314,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     
-    // Sugestões em tempo real
-    searchInput.addEventListener('input', (e) => {
-      const termo = e.target.value.trim();
-      if (termo.length >= 2) {
+    // Sugestões em tempo real com debounce
+    const debouncedSugestoes = debounce((termo) => {
+      if (termo.length >= CONFIG.SEARCH_MIN_LENGTH) {
         mostrarSugestoes(termo);
       } else {
         esconderSugestoes();
       }
+    }, CONFIG.DEBOUNCE_DELAY);
+    
+    searchInput.addEventListener('input', (e) => {
+      const termo = e.target.value.trim();
+      debouncedSugestoes(termo);
     });
     
     // Esconder sugestões ao clicar fora
@@ -447,6 +490,8 @@ function mostrarBotaoLimparPesquisa() {
 
 // Função para destacar um card
 function destacarCard(card) {
+  if (!card) return;
+  
   // Remove destaque de outros cards
   document.querySelectorAll('.card-receita').forEach(c => {
     c.classList.remove('card-destacado');
@@ -455,10 +500,10 @@ function destacarCard(card) {
   // Adiciona destaque ao card encontrado
   card.classList.add('card-destacado');
   
-  // Remove o destaque após 3 segundos
+  // Remove o destaque após tempo configurado
   setTimeout(() => {
     card.classList.remove('card-destacado');
-  }, 3000);
+  }, CONFIG.HIGHLIGHT_DURATION);
 }
 
 // Sugestões para pesquisa
@@ -495,12 +540,12 @@ function criarContainerSugestoes(searchInput) {
 // Função para mostrar sugestões
 function mostrarSugestoes(termo) {
   const container = document.getElementById('sugestoes-container');
-  if (!container) return;
+  if (!container || !termo) return;
   
   const termoLower = termo.toLowerCase();
   const sugestoesFiltradas = todasSugestoes
     .filter(sugestao => sugestao.toLowerCase().includes(termoLower))
-    .slice(0, 5); // Limitar a 5 sugestões
+    .slice(0, 5);
   
   if (sugestoesFiltradas.length > 0) {
     container.innerHTML = sugestoesFiltradas

@@ -1,34 +1,51 @@
-// Guard de autenticação com fluxo "Sobre primeiro, depois Login"
-(function() {
-  try {
-    const isAuth = localStorage.getItem('isAuthenticated') === 'true';
-    const visitedAbout = localStorage.getItem('visitedAbout') === 'true';
-    const path = window.location.pathname;
-    const page = path.split('/').pop() || 'index.html';
-
-    // Ao abrir a página Sobre, marca que o usuário já a viu
-    if (page === 'sobre.html') {
-      try { localStorage.setItem('visitedAbout', 'true'); } catch {}
-      // Permite ficar na página Sobre sem autenticação
-      return;
+// Guard de autenticação
+const AuthGuard = {
+  STORAGE_KEYS: {
+    AUTH: 'isAuthenticated',
+    VISITED_ABOUT: 'visitedAbout'
+  },
+  
+  getStorageItem(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn(`Erro ao acessar localStorage para ${key}:`, error);
+      return null;
     }
+  },
+  
+  setStorageItem(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      console.warn(`Erro ao salvar no localStorage ${key}:`, error);
+    }
+  },
+  
+  init() {
+    try {
+      const isAuth = this.getStorageItem(this.STORAGE_KEYS.AUTH) === 'true';
+      const visitedAbout = this.getStorageItem(this.STORAGE_KEYS.VISITED_ABOUT) === 'true';
+      const page = window.location.pathname.split('/').pop() || 'index.html';
 
-    // Permite acessar a página de login sem bloqueio
-    if (page === 'login.html') return;
-
-    // Para quem não está autenticado, força ver primeiro o Sobre e depois o Login
-    if (!isAuth) {
-      if (!visitedAbout) {
-        window.location.replace('sobre.html');
-      } else {
-        window.location.replace('login.html');
+      if (page === 'sobre.html') {
+        this.setStorageItem(this.STORAGE_KEYS.VISITED_ABOUT, 'true');
+        return;
       }
-      return;
+
+      if (page === 'login.html') return;
+
+      if (!isAuth) {
+        const redirectTo = visitedAbout ? 'login.html' : 'sobre.html';
+        window.location.replace(redirectTo);
+      }
+    } catch (error) {
+      console.warn('Auth guard falhou:', error);
     }
-  } catch (e) {
-    console.warn('Auth guard falhou:', e);
   }
-})();
+};
+
+AuthGuard.init();
 
 // Sistema de alternância de tema
 class ThemeManager {
