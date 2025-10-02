@@ -517,9 +517,35 @@ footer h3 {
 
 .grid-receitas {
   display: grid;
-  grid-template-columns: repeat(6, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
   justify-content: center;
+}
+
+/* Responsividade para o grid de receitas */
+@media (max-width: 1400px) {
+  .grid-receitas {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .grid-receitas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-receitas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-receitas {
+    grid-template-columns: 1fr;
+  }
 }
 
 
