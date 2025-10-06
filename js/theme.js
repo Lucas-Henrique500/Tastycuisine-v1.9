@@ -36,7 +36,7 @@ const AuthGuard = {
       if (page === 'login.html') return;
 
       if (!isAuth) {
-        const redirectTo = visitedAbout ? 'login.html' : 'sobre.html';
+        const redirectTo = visitedAbout ? 'html/login.html' : 'html/sobre.html';
         window.location.replace(redirectTo);
       }
     } catch (error) {
@@ -105,7 +105,7 @@ function setupAuthUI() {
     const isAuth = localStorage.getItem('isAuthenticated') === 'true';
 
     // Remove o item "Sobre" do menu em todas as páginas
-    menu.querySelectorAll('a[href="sobre.html"]').forEach(a => {
+    menu.querySelectorAll('a[href="sobre.html"], a[href="html/sobre.html"]').forEach(a => {
       const li = a.closest('li');
       if (li) li.remove();
       else a.remove();
@@ -130,7 +130,7 @@ function setupAuthUI() {
         e.preventDefault();
         try { localStorage.removeItem('isAuthenticated'); } catch {}
         // Redireciona para a página Sobre após sair
-        window.location.href = 'sobre.html';
+        window.location.href = 'html/sobre.html';
       });
     }
 
